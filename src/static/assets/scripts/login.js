@@ -8,7 +8,7 @@ let user = id("loginUser"),
 
 const loginCred = {
   user: 'dm90ZS1nb3YtcHJvdG90eXBl',
-  pass: 'T0ZGSUNJQUwtdm90ZS1nb3Y='
+  pass: 'cGFzc3dvcmQ='
 };
 
 dialog.showModal();
