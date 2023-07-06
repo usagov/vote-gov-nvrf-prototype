@@ -1,0 +1,3 @@
+[submodule "app/repo"]
+	path = app/repo
+	url = git@github.com:usagov/vote-gov-nvrf-app.git

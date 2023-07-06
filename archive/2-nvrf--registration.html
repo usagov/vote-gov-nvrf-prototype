@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  <script src="src/static/assets/scripts/uswds-init.min.js"></script>
+  <script src="../src/static/assets/scripts/uswds-init.min.js"></script>
 
 
 
@@ -38,25 +38,25 @@
 
 
 
-  <link rel="shortcut icon" type="image/ico" href="src/static/assets/img/favicon.ico"/>
-  <link rel="icon" type="image/png" href="src/static/assets/img/favicon.png"/>
+  <link rel="shortcut icon" type="image/ico" href="../src/static/assets/img/favicon.ico"/>
+  <link rel="icon" type="image/png" href="../src/static/assets/img/favicon.png"/>
 
 
-  <link rel="icon" type="image/png" sizes="192x192" href="src/static/assets/img/favicon-192.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="../src/static/assets/img/favicon-192.png"/>
 
 
-  <link rel="apple-touch-icon" href="src/static/assets/img/favicon-57.png">
+  <link rel="apple-touch-icon" href="../src/static/assets/img/favicon-57.png">
 
-  <link rel="apple-touch-icon" sizes="72x72" href="src/static/assets/img/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../src/static/assets/img/favicon-72.png">
 
   <link rel="apple-touch-icon" sizes="114x114"
-        href="src/static/assets/img/favicon-114.png">
+        href="../src/static/assets/img/favicon-114.png">
 
   <link rel="apple-touch-icon" sizes="144x144"
-        href="src/static/assets/img/favicon-144.png">
+        href="../src/static/assets/img/favicon-144.png">
 
 
-  <link rel="stylesheet" href="src/static/assets/styles/main.css">
+  <link rel="stylesheet" href="../src/static/assets/styles/main.css">
 
 
 
@@ -77,7 +77,7 @@
         <div class="usa-banner__inner">
           <div class="banner__text-container grid-row">
             <div class="grid-col-auto">
-              <img class="usa-banner__header-flag" width="16" height="11" loading="lazy" src="src/static/assets/img/us_flag_small.webp" alt="U.S. flag">
+              <img class="usa-banner__header-flag" width="16" height="11" loading="lazy" src="../src/static/assets/img/us_flag_small.webp" alt="U.S. flag">
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
               <div class="usa-banner__header-text">An official website of the United States government</div>
@@ -176,7 +176,7 @@
       <div class="usa-banner__content usa-accordion__content" id="gov-banner">
         <div class="grid-row grid-gap-lg">
           <div class="usa-banner__guidance tablet:grid-col-6">
-            <img class="usa-banner__icon usa-media-block__img" loading="lazy" width="40" height="40" src="src/static/assets/img/icon-dot-gov.svg"
+            <img class="usa-banner__icon usa-media-block__img" loading="lazy" width="40" height="40" src="../src/static/assets/img/icon-dot-gov.svg"
               role="presentation" alt aria-hidden="true">
             <div class="usa-media-block__body">
               <p>
@@ -187,7 +187,7 @@
             </div>
           </div>
           <div class="usa-banner__guidance tablet:grid-col-6">
-            <img class="usa-banner__icon usa-media-block__img" loading="lazy" width="40" height="40" src="src/static/assets/img/icon-https.svg"
+            <img class="usa-banner__icon usa-media-block__img" loading="lazy" width="40" height="40" src="../src/static/assets/img/icon-https.svg"
               role="presentation" alt aria-hidden="true">
             <div class="usa-media-block__body">
               <p>
@@ -323,7 +323,7 @@
 
       <button class="usa-button" type="submit" name="commit" data-disable-with="Search">
         <img
-          src="src/static/assets/img/usa-icons-bg/search--white.svg"
+          src="../src/static/assets/img/usa-icons-bg/search--white.svg"
           class="usa-search__submit-icon"
           alt="Search Vote.gov "
         />
@@ -427,22 +427,21 @@
           aria-label="progress"
   >
     <ol class="usa-step-indicator__segments">
-      <li
-              class="usa-step-indicator__segment usa-step-indicator__segment--current"
-              aria-current="true"
-      >
+      <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
       <span class="usa-step-indicator__segment-label"
       >Check eligibility</span
       >
       </li>
-      <li class="usa-step-indicator__segment">
+      <li class="usa-step-indicator__segment usa-step-indicator__segment--current"
+              aria-current="true"
+      >
       <span class="usa-step-indicator__segment-label"
-      >New voter registration<span class="usa-sr-only">not completed</span></span
+      >New Voter Registration</span
       >
       </li>
       <li class="usa-step-indicator__segment">
       <span class="usa-step-indicator__segment-label"
-      >Confirm voter information<span class="usa-sr-only">not completed</span></span
+      >Confirmation<span class="usa-sr-only">not completed</span></span
       >
       </li>
       <li class="usa-step-indicator__segment">
@@ -458,180 +457,229 @@
     <h2 class="usa-step-indicator__heading">
       <span class="usa-step-indicator__heading-counter"
       ><span class="usa-sr-only">Step</span>
-        <span class="usa-step-indicator__current-step">1</span>
+        <span class="usa-step-indicator__current-step">2</span>
         <span class="usa-step-indicator__total-steps">of 4</span> </span
       ><span class="usa-step-indicator__heading-text"
-    >Check voter registration eligibility</span
+    >New voter registration</span
     >
     </h2>
   </div>
 
   <form action="" class="usa-form">
-<!--    State selector -->
-    <label class="usa-label" for="options">State or territory</label>
-    <select class="usa-select" name="options" id="options">
-      <option value>Select your state or territory</option>
-      <option value="al">Alabama</option>
-
-      <option value="ak">Alaska</option>
-
-      <option value="as">American Samoa</option>
-
-      <option value="az">Arizona</option>
-
-      <option value="ar">Arkansas</option>
-
-      <option value="ca">California</option>
-
-      <option value="co">Colorado</option>
-
-      <option value="ct">Connecticut</option>
-
-      <option value="de">Delaware</option>
-
-      <option value="dc">District of Columbia</option>
-
-      <option value="fl">Florida</option>
-
-      <option value="ga">Georgia</option>
-
-      <option value="gu">Guam</option>
-
-      <option value="hi">Hawaii</option>
-
-      <option value="id">Idaho</option>
-
-      <option value="il">Illinois</option>
-
-      <option value="in">Indiana</option>
-
-      <option value="ia">Iowa</option>
-
-      <option value="ks">Kansas</option>
-
-      <option value="ky">Kentucky</option>
-
-      <option value="la">Louisiana</option>
-
-      <option value="me">Maine</option>
-
-      <option value="md">Maryland</option>
-
-      <option value="ma">Massachusetts</option>
-
-      <option value="mi">Michigan</option>
-
-      <option value="mn">Minnesota</option>
-
-      <option value="ms">Mississippi</option>
-
-      <option value="mo">Missouri</option>
-
-      <option value="mt">Montana</option>
-
-      <option value="ne">Nebraska</option>
-
-      <option value="nv">Nevada</option>
-
-      <option value="nh">New Hampshire</option>
-
-      <option value="nj">New Jersey</option>
-
-      <option value="nm">New Mexico</option>
-
-      <option value="ny">New York</option>
-
-      <option value="nc">North Carolina</option>
-
-      <option value="nd">North Dakota</option>
-
-      <option value="mp">Northern Mariana Islands</option>
-
-      <option value="oh">Ohio</option>
-
-      <option value="ok">Oklahoma</option>
-
-      <option value="or">Oregon</option>
-
-      <option value="pa">Pennsylvania</option>
-
-      <option value="pr">Puerto Rico</option>
-
-      <option value="ri">Rhode Island</option>
-
-      <option value="sc">South Carolina</option>
-
-      <option value="sd">South Dakota</option>
-
-      <option value="tn">Tennessee</option>
-
-      <option value="tx">Texas</option>
-
-      <option value="vi">U.S. Virgin Islands</option>
-
-      <option value="ut">Utah</option>
-
-      <option value="vt">Vermont</option>
-
-      <option value="va">Virginia</option>
-
-      <option value="wa">Washington</option>
-
-      <option value="wv">West Virginia</option>
-
-      <option value="wi">Wisconsin</option>
-
-      <option value="wy">Wyoming</option>
-    </select>
-
-<!--    Zip code -->
-    <label class="usa-label" for="zip">ZIP Code</label>
-    <div class="usa-hint" id="zipHint">For example, 12345-6789</div>
-    <input
-            id="zip"
-            inputmode="numeric"
-            name="zip"
-            placeholder="_____-____"
-            pattern="^[0-9]{5}(?:-[0-9]{4})?$"
-            class="usa-input usa-masked"
-            aria-describedby="zipHint"
-    />
-    <!--    Checkbox -->
-    <div class="usa-checkbox">
-      <br />
-      <input
-              class="usa-checkbox__input"
-              id="check-citizen"
-              type="checkbox"
-              name="check-citizen"
-              value="citizen"
-      />
-      <label class="usa-checkbox__label" for="check-citizen"
-      >I am a US citizen.*</label
-      >
+<!--    Name -->
+    <div class="grid-row grid-gap">
+      <div class="grid-col-3">
+        <label class="usa-label" for="title">Title*</label>
+        <select name="title" id="title" class="usa-select">
+          <option value=""></option>
+          <option value="Mr.">Mr.</option>
+          <option value="Mrs.">Mrs.</option>
+          <option value="Miss">Miss</option>
+          <option value="Ms.">Ms.</option>
+        </select>
+      </div>
+      <div class="grid-col">
+        <label class="usa-label" for="input-type-text">First name*</label>
+        <input class="usa-input" id="input-type-text" name="input-type-text" />
+      </div>
+      <div class="grid-col-3">
+        <label class="usa-label" for="input-type-text">Middle</label>
+        <input class="usa-input" id="input-type-text" name="input-type-text" />
+      </div>
     </div>
-    <!--    Checkbox -->
+    <div class="grid-row grid-gap">
+      <div class="grid-col">
+        <label class="usa-label" for="input-type-text">Last name*</label>
+        <input class="usa-input" id="input-type-text" name="input-type-text" />
+      </div>
+      <div class="grid-col-3">
+        <label class="usa-label" for="suffix">Suffix</label>
+        <select name="suffix" id="suffix" class="usa-select"><option value="">(none)</option>
+          <option value="Jr.">Jr.</option>
+          <option value="Sr.">Sr.</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">IV</option>
+          <option value="V">V</option>
+          <option value="VI">VI</option>
+          <option value="VII">VII</option></select>
+      </div>
+    </div>
+<!--    Checkbox -->
     <div class="usa-checkbox">
       <br/>
       <input
               class="usa-checkbox__input"
-              id="check-age"
+              id="change-name"
               type="checkbox"
-              name="check-age"
-              value="age"
+              name="change-name"
+              value="change-name"
       />
-      <label class="usa-checkbox__label" for="check-age"
-      >I am at least sixteen years old and will not vote in a special or general election until I turn eighteen.*</label
-      >
-    </div>
+      <label class="usa-checkbox__label" for="change-name">I have changed my name.</label>
+<!--    Date picker -->
+      <div class="usa-form-group">
+        <label class="usa-label" id="appointment-date-label" for="appointment-date"
+        >Date of birth*</label
+        >
+        <div class="usa-hint" id="appointment-date-hint">mm/dd/yyyy</div>
+        <div class="usa-date-picker">
+          <input
+                  class="usa-input"
+                  id="appointment-date"
+                  name="appointment-date"
+                  aria-labelledby="appointment-date-label"
+                  aria-describedby="appointment-date-hint"
+                  maxlength="12"
+          />
+        </div>
+      </div>
+<!--    Home Address -->
+      <label class="usa-label" for="input-type-text">Address*</label>
+      <input class="usa-input" id="input-type-text" name="input-type-text" />
+
+      <div class="grid-row grid-gap">
+        <div class="grid-col">
+          <label class="usa-label" for="unit-type">Unit type</label>
+          <select name="unit-type" id="unit-type" class="usa-select"><option value=""></option>
+            <option value="APT">APARTMENT</option>
+            <option value="BSM">BASEMENT</option>
+            <option value="BOX">BOX #</option>
+            <option value="BLD">BUILDING</option>
+            <option value="DEP">DEPARTMENT</option>
+            <option value="FL">FLOOR</option>
+            <option value="FRN">FRONT</option>
+            <option value="HNG">HANGER</option>
+            <option value="LBB">LOBBY</option>
+            <option value="LOT">LOT</option>
+            <option value="LOW">LOWER</option>
+            <option value="OFC">OFFICE</option>
+            <option value="PH">PENTHOUSE</option>
+            <option value="PIE">PIER</option>
+            <option value="POL">POLL</option>
+            <option value="REA">REAR</option>
+            <option value="RM">ROOM</option>
+            <option value="SID">SIDE</option>
+            <option value="SLI">SLIP</option>
+            <option value="SPC">SPACE</option>
+            <option value="STO">STOP</option>
+            <option value="STE">SUITE</option>
+            <option value="TRL">TRAILER</option>
+            <option value="TRLR">TRAILER</option>
+            <option value="UNI">UNIT</option>
+            <option value="UPP">UPPER</option>
+            <option value="CBN">CABIN</option>
+            <option value="HUB">HUB</option>
+            <option value="SMC">STUDENT MAILING CENTER</option>
+            <option value="TH">TOWNHOUSE</option></select>
+        </div>
+        <div class="grid-col">
+          <label class="usa-label" for="input-type-text">Unit number</label>
+          <input class="usa-input" id="input-type-text" name="input-type-text" />
+        </div>
+      </div>
+
+      <div class="grid-row grid-gap">
+        <div class="grid-col">
+          <label class="usa-label" for="input-type-text">City*</label>
+          <input class="usa-input" id="input-type-text" name="input-type-text" />
+        </div>
+        <div class="grid-col-3">
+          <label class="usa-label" for="input-type-text">State*</label>
+          <input class="usa-input" id="input-type-text" name="input-type-text" value="ZZ" disabled="disabled" />
+        </div>
+        <div class="grid-col">
+          <label class="usa-label" for="input-type-text">ZIP*</label>
+          <input class="usa-input" id="input-type-text" name="input-type-text" value="99999" disabled="disabled" />
+        </div>
+      </div>
+
+<!--    checkbox -->
+      <div class="usa-checkbox">
+        <br/>
+        <input
+                class="usa-checkbox__input"
+                id="prev-address"
+                type="checkbox"
+                name="prev-address"
+                value="prev-address"
+        />
+        <label class="usa-checkbox__label" for="prev-address">I have a previous residential address.</label>
+<!--    checkbox -->
+      <div class="usa-checkbox">
+        <br/>
+        <input
+                class="usa-checkbox__input"
+                id="alt-address"
+                type="checkbox"
+                name="alt-address"
+                value="alt-address"
+        />
+        <label class="usa-checkbox__label" for="alt-address">I get my mail at a different address from the one above.</label>
+<!--    ID -->
+        <label class="usa-label" for="input-type-text">State driver license or ID*</label>
+        <input class="usa-input" id="input-type-text" name="input-type-text" />
+<!--    Date picker -->
+        <div class="usa-form-group">
+          <label class="usa-label" id="appointment-date-label" for="appointment-date"
+          >Driver's license issue date*</label
+          >
+          <div class="usa-hint" id="appointment-date-hint">mm/dd/yyyy</div>
+          <div class="usa-date-picker">
+            <input
+                    class="usa-input"
+                    id="appointment-date"
+                    name="appointment-date"
+                    aria-labelledby="appointment-date-label"
+                    aria-describedby="appointment-date-hint"
+                    maxlength="12"
+            />
+          </div>
+        </div>
+<!--    checkbox -->
+      <div class="usa-checkbox">
+        <br/>
+        <input
+                class="usa-checkbox__input"
+                id="no-id"
+                type="checkbox"
+                name="no-id"
+                value="no-id"
+        />
+        <label class="usa-checkbox__label" for="no-id">I do not have a state driver license or ID.</label>
+<!--    phone -->
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col">
+            <label class="usa-label" for="tel">Phone Number</label>
+            <input
+                    id="tel"
+                    type="tel"
+                    inputmode="numeric"
+                    name="tel"
+                    placeholder="___-___-____"
+                    pattern="\d{3}-\d{3}-\d{4}"
+                    class="usa-input usa-masked"
+                    aria-describedby="telHint"
+            />
+            <div class="usa-hint" id="telHint">For example, 123-456-7890</div>
+          </div>
+          <div class="grid-col">
+            <label class="usa-label" for="phone-type">Phone type</label>
+            <select name="phone-type" id="phone-type" class="usa-select"><option value=""></option>
+              <option value="Mobile">Mobile</option>
+              <option value="Home">Home</option>
+              <option value="Work">Work</option>
+              <option value="Other">Other</option></select>
+          </div>
+        </div>
   </form>
 
-  <br />
-<a href="2-nvrf--registration.html">
+<a href="3-nvrf--confirm.html">
     <button type="button" class="usa-button">
-        Next: New Voter Registration
+        Next: Confirm voter information
     </button></a>
-  <p><a href="0-nvrf--intro.html">< Go back</a></p>
+  <p><a href="1-nvrf--eligibility.html">< Previous step</a></p>
 </div>
 
           </section>
@@ -654,13 +702,13 @@
       <div class="grid-row">
         <div class="tablet:grid-col-auto">
           <div class="vote-txt">Vote.gov</div>
-          <img class="vote-logo" loading="lazy" width="130" height="160" src="src/static/assets/img/ballot_box-blue.svg"
+          <img class="vote-logo" loading="lazy" width="130" height="160" src="../src/static/assets/img/ballot_box-blue.svg"
             alt="Web design standards">
         </div>
         <div class="tablet:grid-col-auto partnership-txt">in partnership with</div>
         <div class="tablet:grid-col-auto eac-container">
           <a href="https://www.eac.gov/">
-            <img class="eac-logo" width="146" height="48" src="src/static/assets/img/eac-logo.webp" alt="In partnership with U.S. Election Assistance Commission">
+            <img class="eac-logo" width="146" height="48" src="../src/static/assets/img/eac-logo.webp" alt="In partnership with U.S. Election Assistance Commission">
           </a>
 
         </div>
@@ -680,7 +728,7 @@
 <div class="footer-identifier" data-test="footer">
   <div class="grid-container">
     <section class="identifier-gsa grid-row grid-gap-2" aria-label="Agency identifier">
-      <div><img src="src/static/assets/img/gsa-logo.svg" alt="GSA logo" width="40" height="40"></div>
+      <div><img src="../src/static/assets/img/gsa-logo.svg" alt="GSA logo" width="40" height="40"></div>
       <div aria-label="Agency description" class="grid-col-auto">
         Vote.gov <br>
         <strong>An official website of the
@@ -729,7 +777,7 @@
 
 
 
-<script src="src/static/assets/scripts/main.js"></script>
+<script src="../src/static/assets/scripts/main.js"></script>
 
 </body>
 
