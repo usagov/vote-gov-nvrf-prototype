@@ -8,21 +8,6 @@ $theme-show-notifications: false,
 
 // Components ------------ //
 
-@forward 'uswds';
-//@forward 'usa-header';
-//@forward 'usa-accordion';
-//@forward 'uswds-form-controls';
-//@forward 'usa-alert';
-//@forward 'usa-banner';
-//@forward 'usa-skipnav';
-//@forward "usa-link";
-//@forward "usa-prose";
-//@forward "usa-intro";
-//@forward "usa-language-selector";
-//@forward "usa-step-indicator";
-//@forward "usa-process-list";
-//@forward "usa-input-mask";
-
 @forward 'component/language-switcher';
 @forward 'component/identifier';
 @forward 'component/contact';

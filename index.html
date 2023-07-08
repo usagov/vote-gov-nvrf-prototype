@@ -3,18 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<!--    <script src="src/static/assets/scripts/uswds-init.min.js"></script>-->
-    <script type="module" crossorigin src="app/dist/assets/index-647612ad.js"></script>
-
-
-
 
     <title>National Voter Registration Form Prototype | Vote.gov</title>
     <meta name="description" content="Vote.gov is a United States government website that provides trusted voting information and can help you find voter registration rules for your state." />
@@ -56,19 +47,18 @@
     <link rel="apple-touch-icon" sizes="144x144"
           href="src/static/assets/img/favicon-144.png">
 
+    <!-- START app dependencies -->
+    <script type="module" crossorigin src="app/dist/assets/index-6196b11a.js"></script>
+    <link rel="stylesheet" href="app/dist/assets/index-4765f8f1.css">
+    <!-- END app dependencies -->
 
-<!--    <link rel="stylesheet" href="app/dist/assets/index-d6d85097.css">-->
     <link rel="stylesheet" href="src/static/assets/styles/main.css">
-
-
-
-
 </head>
 
 
 <body class="page-basic">
 
-<dialog id="loginDialog" style="width: 480px; border: 0; border-radius: 0.5rem; padding: 1.5rem;">
+<dialog id="loginDialogs" style="width: 480px; border: 0; border-radius: 0.5rem; padding: 1.5rem;">
     <form class="usa-form">
         <h2>Sign in</h2>
         <p>This prototype is restricted to authenticated users.</p>
@@ -90,7 +80,7 @@
         </div>
     </form>
 </dialog>
-<div id="protoContainer" hidden>
+<div id="protoContainer">
 <a class="usa-skipnav" href="#skip-target" onclick="document.getElementById('skip-target').focus();">Skip to main content</a>
 <header class="usa-header" role="banner">
 
@@ -141,7 +131,7 @@
 
                 </div>
             </div>
-            <div class="usa-banner__content usa-accordion__content" id="gov-banner">
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden>
                 <div class="grid-row grid-gap-lg">
                     <div class="usa-banner__guidance tablet:grid-col-6">
                         <img class="usa-banner__icon usa-media-block__img" loading="lazy" width="40" height="40" src="src/static/assets/img/icon-dot-gov.svg"
@@ -287,6 +277,7 @@
                     name="query"
                     autocomplete="off"
                     placeholder="Search Vote.gov "
+                    style="margin-top: 0; height: 2rem;"
             />
 
             <button class="usa-button" type="submit" name="commit" data-disable-with="Search">
@@ -306,7 +297,7 @@
     <div class="bg-blue css-arrow">
         <div class="grid-container">
             <div class="grid-row grid-gap">
-                <div class="tablet:grid-col-4">
+                <div class="tablet:grid-col-3">
                     <a class="site-logo" href="/" aria-label="Vote.gov">
                         <div class="logo-text">Vote.gov</div>
                         <div id="SiteLogo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -373,7 +364,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="skip-target" class="tablet:grid-col-8 right-shift">
+                <div id="skip-target" class="tablet:grid-col-9 right-shift">
                     <div class="align-center">
                         <h1 class="main-heading" data-test="main-header">National Voter Registration Form</h1>
                     </div>
@@ -384,8 +375,8 @@
     <div>
         <div class="grid-container">
             <div class="grid-row grid-gap">
-                <div class="tablet:grid-col-4"></div>
-                <div class="tablet:grid-col-8 right-shift">
+                <div class="tablet:grid-col-3"></div>
+                <div class="tablet:grid-col-9 right-shift">
                     <section class="voter-info page-type--basic">
 
                         <div class="about-page">
@@ -484,7 +475,6 @@
 </div>
 
 <script src="src/static/assets/scripts/login.js"></script>
-<script src="src/static/assets/scripts/main.js"></script>
 
 </body>
 

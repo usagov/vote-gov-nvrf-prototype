@@ -1,15 +1,485 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="/assets/index-647612ad.js"></script>
-    <link rel="stylesheet" href="/assets/index-3fa9f906.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>National Voter Registration Form Prototype | Vote.gov</title>
+  <meta name="description" content="Vote.gov is a United States government website that provides trusted voting information and can help you find voter registration rules for your state." />
+  <meta property="og:title" content="About Us" />
+  <meta property="twitter:title" content="About Us" />
+
+  <meta property="og:description" content="Vote.gov is a United States government website that provides trusted voting information and can help you find voter registration rules for your state." />
+  <meta property="twitter:description" content="Vote.gov is a United States government website that provides trusted voting information and can help you find voter registration rules for your state." />
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="/about-us/"/>
+  <meta name="image" property="og:image" content="theme/assets/img/ballot-box-OG.png"/>
+  <meta property="twitter:image" content="theme/assets/img/ballot-box-OG.png"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@votegov">
+  <meta name="twitter:widgets:autoload" content="off">
+  <meta name="twitter:dnt" content="on">
+  <meta name="twitter:widgets:csp" content="on">
+  <link rel="me" href="https://twitter.com/votegov">
+  <link rel="canonical" href="/about-us/"/>
+
+
+
+  <link rel="shortcut icon" type="image/ico" href="/assets/favicon-92275841.ico"/>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+
+
+  <link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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"/>
+
+
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAMAAAC7xnO3AAAApVBMVEUAAAAtLi8tLi8tLi82NjtPT08uLzAtLi8tLjAtLy8uMDAwMjMtLi8uLzAuLzAvMDAtLi8yMjc3NzctLi8tLy8vMDM1OjpAQEAtLy8tLy8tLjAuLzAuLzAuLzAvMDAvMTEwMjMyMjI1NTXd3d0tLi8tLi8tLi8tLi8tLi8tLi8tLy8vMTItLjAtLi8uLi8tLzAuLzEuLi8uLjAtLzAxMTEtLzAtLi80s2MMAAAANnRSTlMA8fX6CgNU5K98eyHDb2pA1hYOyIEtEQbas5mIYVs0MCcdEwHozry3oo11Ot7TnZRHp4NOL6nToYqLAAACVElEQVRIx+XV19aiQBAE4FKC/II5Z8Wc4/b7P9oiYYYeBte923P2u9RTChTTjf/S7Fz8oIo8c6C5o3wuTGhNwx8dF/KCa6DiQmdE5HSB+Zr0yoB3gE6fiEpHoLfXJ+doUAsaHXoz2hZwW2mCZ6BKtEBWmyJe8GVjm022gQ1RBVlnihVsYHkw1GQH3eAzT1MJSUMTmPZ5sA+MKdCAqszuqZOpdgQMKFCFincRVjtJVztFM7yBDRQuMVG1bosSJ2ASPXwf3IFU/SbQG1FsDzgUGoNrqcF6B4Cs9gizSKEtmIWMyMcbSKotLWFTxGiyZIXngkqFZcUgugJ3ik1Y0mNBz+Wntk819MSDdpDS4O+ZBc7cW3jKxkxIVZJKNejsSLAhbViPOsHFCr8gdA327ujc0s+vh8SYlag1pJQnEoNUibMBNCx21neINQ1ZYlDeDFk1It3lTuQseP/7A1lXYm6IOMn8qZXCm0XGssSTl7jnYlSiNRJDTnUkbmXhzVYP4w9Ue1JEb8tdHQBrqE5q8hodzQ5gXvgC4aakKoVVmeFpSDuoyXLsR7DECWRa+IZ2oC/wFX9AqgqwKXxwbyKiXi15bBiqjAqEV524BtzcYH0GgbcS74A16V1McDbb8hu+aPhUVLkeSYaPuS7YcqFhPUgaA/VscGRBryYP01YscTYVc/kOyR3wIm7g45NqUe6Ak1riZ5262AGjdIkv/JE5THbAlK02LW21NnCSJX5p4UU7YC9W29esthEM1XhwPXJKzK/2ieVKlvi9rrMDruT4+Hs2cBzjn/Ib21EKeBKzMn8AAAAASUVORK5CYII=">
+
+  <link rel="apple-touch-icon" sizes="72x72" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAnFBMVEUAAAAtLi8uLjAuMjMtMjItLi9DQ0M+Pj4xODgtLi8uLzAtLi8vMzMzMzQuLy8tLi8tLi83Nz4tLjAtLjAtLjAtLi8tLi8uLzAuLzEtLi8uLzAvLzAtLi8tLi8tLy8uLjAuMDAvMDEvMDQtLy8uLy8tLi8yMjItLi8tLy8uLzAuLzAxMTEtLy8tLzAtLy8uLzAwMTEtLi8uLzAtLi+1cUq/AAAAM3RSTlMA2JAyM/oECBCtZ+MbFPXu0wyGf8C0mXBN8lIq98WfV0A6Id3Jph7puFtFJox1a2AuzHl8lB1xAAAC5UlEQVRYw+zUyVriQBRA4QN0BogBAjLKJKAIitB93//duqkmH9wawJ0b/02+7Go4t/jxjeJu5QumfMF8JHfNuG3ZL4DlWu4ZQi0lbC+VIxB35LZRDJ0DYWuRyQBgkcktL8CqR9CDnPRyIO/JDWM4yqQgZCBGtjA/EwlpJtAV2RLyKGedGDhWJKAOtM3HLxcprZdA0Re/ObyfFlbg15CL1twk1RKXOZw/5qjwe9PNmaSm4uoBv8vL80gjUSq1QFIHWP7PKcHnIJbIn1SUwr4M3EeXE07qzZRrzAI7c2U7gE+VVMOUa7RiXFtRgklFOQzkbIerLj7RnpPkktTjdbl9HEVTPFa/OBuXSX1el7vBMfdOeQGl13NSD6rcBbYXcYy21iMs/0x1uVUsyUg0M2+aSWqg7zfDMhTbR4wjrcurVe4z2ky0zQ6voV3uB0rcsurNCUpVniuUnRuPFi63xrW+M/ZhdSt9tbONfohc4XIr6l7teBKCxmJ54qKq40mqVWzhcrtcZGrWn9qqs3vltqH0rOJpNFVnTrmOd0p/q6/bnISBKIzCL5+F2lgCBKtYSUOsMUWidv97M5kyuQ2nozb9xbODwpmZe0/+PnTxXnWGcuFb3tFu6OLuujOUC1+6mFo8mxk6Q7lUqrH28STbrs5QLjyoMaofD3YJojOUC7mc6hLPLtAZyqXmiMc+nlBnKBcOzXjl40Fn9DHulLVuPqrUi8XDzvqKfTzsLJnQFEp8GDp7r4GWdi/bT23w8gQ8n2X45+MtDFl9yjBHvM4hu0htOCA2L/z6bemTyI4sJpiQvFQ3u0RspjrXIbPN/I8yMeWBLRrkk8LcmQfiWSiISc0Wbl6k+1idmJTN5mVXPHsBRWNsC4znf7IU+wvioXBStlG1bRMBMCm34yGePoqjbZ2teAr1tnj1e/Ae8QAgKbfcjRBPT9WqWe7WiAeASWXSxM34kYbI3l7cuJJmGihZzqWTxTNMpBv0A9bgnc2zW7RCAAAAAElFTkSuQmCC">
+
+  <link rel="apple-touch-icon" sizes="114x114"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAByCAMAAAC4A3VPAAAAmVBMVEUAAAAtLy8tLjAtLi8uLzBBQUEtLi8tLi8tLi8uLzAvLzBNTU0tLjAuLzEvMDE6Oj41NTYuLi80NDQtLi8tLjAtLy8uLzAxMTIxNDQtLjAtLi8uLzAuLzAwMDEwMzMzNDQtLi8uLzAuMDEtLi8uLzAvLzAvMTEtLi8tLi8tLi8tLi8uLy8uLzEuLy8uLzAxMTEuLjAtLi8tLi/WwQvaAAAAMnRSTlMA6OX4+wf0zrx1NgSkSjwLF44O8OyqeyYd3NeCYzAiEd9dRMiJUCrCtrCcbleXaRmS0n67hK8AAAShSURBVGje7NjJcuIwFAXQaxvMjJnDECAQwpiQ9Pv/j+tYNiVoDU/Srqs4q1RKLCx03xXG09PT/2Q9joLFa4SZVChQHaGabxTmCm/9DMKgTUF6+LWEhy7Nmii8puTvgNxpCnc/RJUGCi818nYRO5Q04C6mX8cehGqffInH29DBZ1+FaItCJyIv78iNib7hqk+lXQtCr04+xIZmqc/BldGorVBo+ERUfOjDJ55LktLNLaIzclVDLo9XpQc3O7rXHvhGdCIO3TD/8xVu5nRPRnTjGNG9OHKUO8LJnh54R3SO3JlyyQAuFqSo+0R0ka9sjUjYwMUfUkUdFLZ8RJdiHRVOcPBCWv1qGdEj2c2Q+6JCkoE3Ib3ai1tEd8hFVPoEr0YKr4g2y5FZGoM1JYUS0cwS0bisopu0Ck6DFLqIDsmgL6uo8AHOOyl0EV2Z1nXF1pPUBuObGPWykFo70onKKpKG3M5eiMFE9OtWRVIHdkwxshHd3qpIOsOqVyHe2x6lRkKPRqLTF8r/LF6JN17fVeucNE80V57c4kic9LECszMp39te+X4t1nJfmbEnfQ7/PZ0T5RRbbIjxU4WkRrStr6IuzE5kNepAVUZUTpqVZiIZZQk3BQy2MeXSTD8y32D0SRaVCfRkRMemkdmEydgWxiasLknZjVNthxpkqSWMAzCW8yQzjcwZDD6YMDKyYtFBfx/Sa7uEMayKFtCqDvkw8q7mu62q4xbGsCrS79PZLYxhVaRNWGvkGMagKqpBY+saxrAqWkH1Zb5E8vgqakAVuYYxrIreoegaw3jdgcdX0VR91WO4U61PFIPHV9FFWR3rb47dWC2CsCo6KC8ItT9hWwtDEfBVpOrh0U73K2B6YIpAqSKft5d/2zWbnYShKAhfC62tBfkpaikBIZEiFFDu+z+cSaO5pNPL1JOz02/jyhV8TDtz5i3vOsfMFwQ8inhHu0QZRwcSBCSKgP5reyURbfChGIOARRGCJVDRlLHqQZVDGVovWAKVICMJAhJFAJZAz43XuIAHAY8iZNOsJN6djDQISBQBUAKt+Ct5Yigny4hcCZSgjDwIeBQhR1dJgIxIzttxiqsqphnIiFS8Hedk6c+ntwIZaRAgRa8DL/AqQ4JAF5QRg0CZ9I2PdYqgjDwI5ICMJAj02LqfRxYEg0BM4WoK98jRIQjOVsoub3x9Fn3bKQjGVsgixR+sdbcg2FkJwWP7wk7+zdsFcPa+r/uZLEyexoPSq4yX8mJ9eHsdTlGaG4Q3czYKsb3iHEYSRb0dHSfbGkoes4i9F8goutPAvpXTBxkBqugQhjgiI4MreoCOVyIjgncauBBwol9kOo7AuINwLiAjJ/y03rWHD/6n0EgYznybFntqmW2NkI+YLHcCGQWKTmBHQxmNQ+OUKmCP5msiI2f65NmaySJGoIriGhAISniJong3gDIqEU7wOsJTwusxvIMbED0ZuaJFe/0R50abpA/3PFDCa/Mwvy6B0gxl1Gc6aNxm4SKmzya6ukCjMmoqmtTmRGQR01PUXRMSGXUVrX04kkVMkXFsq++5gCxiiiRx/WdPZFSlTOsEW5p//jZfHLH9I+yx4j4AAAAASUVORK5CYII=">
+
+  <link rel="apple-touch-icon" sizes="144x144"
+        href="data:image/png;base64,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">
+
+
+  <!--    <link rel="stylesheet" href="app/dist/assets/index-d6d85097.css">-->
+  
+
+
+
+
+  <script type="module" crossorigin src="/assets/index-6196b11a.js"></script>
+  <link rel="stylesheet" href="/assets/index-4765f8f1.css">
+</head>
+
+
+<body class="page-basic">
+
+<dialog id="loginDialog" data-enabled="true" style="width: 480px; border: 0; border-radius: 0.5rem; padding: 1.5rem;">
+  <form class="usa-form" style="max-width: none;">
+    <h2>Sign in</h2>
+    <p>This prototype is restricted to authenticated users.</p>
+    <div id="loginError" class="usa-alert usa-alert--error usa-alert--slim" role="alert" style="border-left-color: #d54309;" hidden>
+      <div class="usa-alert__body">
+        <p class="usa-alert__text">
+          <strong>Error</strong>: Please enter valid username and password.
+        </p>
+      </div>
+    </div>
+    <p>
+      <label for="loginUser" class="usa-label">Username*</label><input class="usa-input" id="loginUser" name="loginUser" required="true" type="text"/>
+    </p>
+    <p>
+      <label for="loginPass" class="usa-label">Password*</label><input class="usa-input" id="loginPass" name="loginPass" required="true" type="password"/>
+    </p>
+    <div>
+      <button id="loginConfirm" value="default" class="usa-button">Confirm</button>
+    </div>
+  </form>
+</dialog>
+<div id="protoContainer" hidden>
+  <a class="usa-skipnav" href="#skip-target" onclick="document.getElementById('skip-target').focus();">Skip to main content</a>
+  <header class="usa-header" role="banner">
+
+    <section class="usa-banner" aria-label="Official government website">
+      <div class="usa-accordion">
+        <div class="usa-banner__header">
+          <div class="usa-banner__inner">
+            <div class="banner__text-container grid-row">
+              <div class="grid-col-auto">
+                <img class="usa-banner__header-flag" width="16" height="11" loading="lazy" src="data:image/webp;base64,UklGRlQBAABXRUJQVlA4IEgBAABwDgCdASpAACwAPpE+m0oloyIhqrv4ALASCWwBOAH4AOnA0H0D8a+cy2w70+uDSA/wO1n/S/4B7gPEA6ZPmI///p/9H/pPX7UfCV/qvX/ywD+AfgB+mdP+hRWNisNdguhCYP462lCeaD2of2amCaZWZSvJj0lYfNYp6NEAANPamR4tY3fW//+JdHkr34iwKamK/cVipRqH/0P/5gZD9wola/+TJPDykF3GpghQM9ca5QDXyBd8jPP9DWnP6DbV2weoA+wWWlRMaCsDJzhbxQ2OJwrMX4FWcmXivFex3Ij7JNJRuUI8c6Vooz+IsY76xPib1Z8lm7E5jtVQJmz0aPThL16Yz9R1JR2wi+202gXzbTAOrOVUHiJWwklpKW4EW1Ufno///7QR/+1mHfs2FHn5kuu+LNDm78z/7bhZveBTIkdXnU9PeAAA" alt="U.S. flag">
+              </div>
+              <div class="grid-col-fill tablet:grid-col-auto">
+                <div class="usa-banner__header-text">An official website of the United States government</div>
+                <div class="usa-banner__header-action" aria-hidden="true">Here’s how you know</div>
+              </div>
+              <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+                <span class="usa-banner__button-text">Here’s how you know</span>
+              </button>
+            </div>
+
+            <div class="switcher-desktop">
+
+
+
+              <div class="usa-language-container usa-language--big">
+
+                <ul class="usa-language__primary usa-accordion">
+                  <li class="usa-language__primary-item">
+                    <button class="usa-button usa-language__link" data-test="language-button" role="button" aria-expanded="false"
+                            aria-controls="language-options">
+                      Select Language
+                    </button>
+                    <ul id="language-options" class="usa-language__submenu" data-test="language-switcher" name="language-switcher" hidden="true">
+
+                      <li class="usa-language__submenu-item">
+                        <a href="https://vote.gov/" title="https://vote.gov/"><span lang="en"
+                                                                                    xml:lang="en"><strong>English </strong></span></a>
+                      </li>
+
+                    </ul>
+                  </li>
+                </ul>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden>
+          <div class="grid-row grid-gap-lg">
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <img class="usa-banner__icon usa-media-block__img" loading="lazy" width="40" height="40" src="/assets/icon-dot-gov-54f6653a.svg"
+                   role="presentation" alt aria-hidden="true">
+              <div class="usa-media-block__body">
+                <p>
+                  <strong>Official websites use .gov</strong>
+                  <br />
+                  A <strong>.gov</strong> website belongs to an official government organization in the United States.
+                </p>
+              </div>
+            </div>
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <img class="usa-banner__icon usa-media-block__img" loading="lazy" width="40" height="40" src="/assets/icon-https-912daff9.svg"
+                   role="presentation" alt aria-hidden="true">
+              <div class="usa-media-block__body">
+                <p>
+                  <strong>Secure .gov websites use HTTPS</strong>
+                  <br />
+                  A lock (<span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64"
+                                                       viewBox="0 0 52 64" class="usa-banner__lock-image">
+                    <path fill="#000000" fill-rule="evenodd"
+                          d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z">
+                    </path>
+                  </svg></span>) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <div class="switcher-mobile">
+
+
+
+      <div class="usa-language-container usa-language--big">
+
+        <ul class="usa-language__primary usa-accordion">
+          <li class="usa-language__primary-item">
+            <button class="usa-button usa-language__link" role="button" aria-expanded="false"
+                    aria-controls="language-options-1">
+              Select Language
+            </button>
+            <ul id="language-options-1" class="usa-language__submenu" data-test="language-switcher" name="language-switcher" hidden="true">
+
+              <li class="usa-language__submenu-item">
+                <a href="/about-us/" title="/about-us/"><span lang="en"
+                                                              xml:lang="en"><strong>English </strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/es/acerca-de-votegov/" title="/es/acerca-de-votegov/"><span lang="es"
+                                                                                      xml:lang="es"><strong>Español (Spanish)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/bn/about-us/" title="/bn/about-us/"><span lang="bn"
+                                                                    xml:lang="bn"><strong>বাংলা (Bengali)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/zh-hans/about-us/" title="/zh-hans/about-us/"><span lang="zh"
+                                                                              xml:lang="zh"><strong>中文 (Chinese - Simplified)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/zh/about-us/" title="/zh/about-us/"><span lang="zh"
+                                                                    xml:lang="zh"><strong>繁體中文 (Chinese - Traditional)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/hi/about-us/" title="/hi/about-us/"><span lang="hi"
+                                                                    xml:lang="hi"><strong>हिन्दी  (Hindi)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/km/about-us/" title="/km/about-us/"><span lang="km"
+                                                                    xml:lang="km"><strong>ភាសាខ្មែរ (Khmer)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/ko/about-us/" title="/ko/about-us/"><span lang="ko"
+                                                                    xml:lang="ko"><strong>한국어 (Korean)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/nv/about-us/" title="/nv/about-us/"><span lang="nv"
+                                                                    xml:lang="nv"><strong>Diné (Navajo)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/tl/about-us/" title="/tl/about-us/"><span lang="tl"
+                                                                    xml:lang="tl"><strong>Tagalog </strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/vi/about-us/" title="/vi/about-us/"><span lang="vi"
+                                                                    xml:lang="vi"><strong>Tiếng Việt (Vietnamese)</strong></span></a>
+              </li>
+
+              <li class="usa-language__submenu-item">
+                <a href="/ypk/about-us/" title="/ypk/about-us/"><span lang="ypk"
+                                                                      xml:lang="ypk"><strong>Yup&#39;ik </strong></span></a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <div class="bg-lightblue search-container">
+    <div class="grid-container">
+      <form class="usa-search usa-search--small search-bar" role="search" id="search_form"
+            action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
+        <input
+                type="hidden"
+                name="affiliate"
+                id="affiliate"
+                value="vote_en"
+                autocomplete="off"
+        />
+
+        <label class="usa-sr-only" for="search-field-en-small">Search Vote.gov </label>
+
+        <input
+                class="usa-input"
+                id="search-field-en-small"
+                type="search"
+                name="query"
+                autocomplete="off"
+                placeholder="Search Vote.gov "
+        />
+
+        <button class="usa-button" type="submit" name="commit" data-disable-with="Search">
+          <img
+                  src="/assets/search--white-d6620912.svg"
+                  class="usa-search__submit-icon"
+                  alt="Search Vote.gov "
+          />
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <div id="main-content" role="main">
+    <div class="bg-blue css-arrow">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class="tablet:grid-col-3">
+            <a class="site-logo" href="/" aria-label="Vote.gov">
+              <div class="logo-text">Vote.gov</div>
+              <div id="SiteLogo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 170 210" width="200" height="247" enable-background="new 0 0 170 210" xml:space="preserve">
+<polygon fill="#112E51" points="26.6,131.1 10.8,156 82.4,203.1 154,156 138.2,131.1 "/>
+<polygon fill="#0071BC" points="82.4,17.1 14,61.5 14,151.3 82.4,196.3 150.7,151.3 150.7,61.5 "/>
+<polygon fill="#112E51" points="150.7,151.3 150.7,61.5 82.4,108.1 82.4,196.3 "/>
+<g>
+	<polygon fill="#112E51" points="66.8,97.5 14,97.5 14,99.5 69.8,99.5 	"/>
+  <polygon fill="#112E51" points="72.7,101.5 14,101.5 14,103.5 75.6,103.5 	"/>
+  <polygon fill="#112E51" points="61,93.5 14,93.5 14,95.5 63.9,95.5 	"/>
+  <polygon fill="#112E51" points="78.6,105.5 14,105.5 14,107.5 81.5,107.5 	"/>
+  <rect x="14" y="133.5" fill="#112E51" width="68.4" height="2"/>
+  <polygon fill="#112E51" points="49.2,85.5 14,85.5 14,87.5 52.2,87.5 	"/>
+  <rect x="14" y="117.5" fill="#112E51" width="68.4" height="2"/>
+  <rect x="14" y="121.5" fill="#112E51" width="68.4" height="2"/>
+  <rect x="14" y="125.5" fill="#112E51" width="68.4" height="2"/>
+  <rect x="14" y="129.5" fill="#112E51" width="68.4" height="2"/>
+  <rect x="14" y="109.5" fill="#112E51" width="68.4" height="2"/>
+  <polygon fill="#112E51" points="43.4,81.5 14,81.5 14,83.5 46.3,83.5 	"/>
+  <rect x="14" y="113.5" fill="#112E51" width="68.4" height="2"/>
+  <polygon fill="#112E51" points="55.1,89.5 14,89.5 14,91.5 58,91.5 	"/>
+  <polygon fill="#112E51" points="37.5,77.5 14,77.5 14,79.5 40.4,79.5 	"/>
+  <polygon fill="#112E51" points="31.6,73.5 14,73.5 14,75.5 34.5,75.5 	"/>
+  <polygon fill="#112E51" points="25.7,69.5 14,69.5 14,71.5 28.7,71.5 	"/>
+  <polygon fill="#112E51" points="14,61.5 14,63.5 16.9,63.5 	"/>
+  <polygon fill="#112E51" points="19.9,65.5 14,65.5 14,67.5 22.8,67.5 	"/>
+  <polygon fill="#112E51" points="82.4,189.5 72.1,189.5 75.1,191.5 82.4,191.5 	"/>
+  <polygon fill="#112E51" points="82.4,193.5 78.1,193.5 81.2,195.5 82.4,195.5 	"/>
+  <rect x="14" y="141.5" fill="#112E51" width="68.4" height="2"/>
+  <polygon fill="#112E51" points="82.4,153.5 17.3,153.5 20.4,155.5 82.4,155.5 	"/>
+  <polygon fill="#112E51" points="82.4,149.5 14,149.5 14,151.3 14.3,151.5 82.4,151.5 	"/>
+  <polygon fill="#112E51" points="82.4,185.5 66,185.5 69,187.5 82.4,187.5 	"/>
+  <polygon fill="#112E51" points="82.4,157.5 23.4,157.5 26.5,159.5 82.4,159.5 	"/>
+  <rect x="14" y="145.5" fill="#112E51" width="68.4" height="2"/>
+  <rect x="14" y="137.5" fill="#112E51" width="68.4" height="2"/>
+  <polygon fill="#112E51" points="82.4,161.5 29.5,161.5 32.5,163.5 82.4,163.5 	"/>
+  <polygon fill="#112E51" points="82.4,181.5 59.9,181.5 62.9,183.5 82.4,183.5 	"/>
+  <polygon fill="#112E51" points="82.4,165.5 35.6,165.5 38.6,167.5 82.4,167.5 	"/>
+  <polygon fill="#112E51" points="82.4,177.5 53.8,177.5 56.9,179.5 82.4,179.5 	"/>
+  <polygon fill="#112E51" points="82.4,173.5 47.7,173.5 50.8,175.5 82.4,175.5 	"/>
+  <polygon fill="#112E51" points="82.4,169.5 41.7,169.5 44.7,171.5 82.4,171.5 	"/>
+</g>
+<rect x="31.3" y="57.6" fill="#112E51" width="100.9" height="7.6"/>
+<g class="ballot">
+	<rect x="43.6" y="8.4" fill="#FFFFFF" width="78.5" height="69.3"/>
+  <path fill="#112E51" d="M94.6,54.4H70.4c-1,0-1.8-0.8-1.8-1.8V28.5c0-1,0.8-1.8,1.8-1.8h24.2c1,0,1.8,0.8,1.8,1.8v24.2
+		C96.4,53.6,95.6,54.4,94.6,54.4z M71.4,50.8H92V30.3H71.4V50.8z"/>
+  <g>
+		<path fill="#E31C3D" d="M84.9,48.2c-0.7,0-1.5-0.3-2.1-0.7l-8.2-6.4c-1.5-1.1-1.7-3.3-0.6-4.8c0.6-0.8,1.6-1.3,2.7-1.3
+			c0.8,0,1.5,0.2,2.1,0.7l5.7,4.4l19.9-22c0.6-0.7,1.6-1.1,2.5-1.1c0.8,0,1.6,0.3,2.3,0.9c1.4,1.3,1.5,3.4,0.2,4.8l-22,24.4
+			C86.8,47.8,85.9,48.2,84.9,48.2z"/>
+    <g>
+			<path fill="#FFFFFF" d="M107,18.1c0.6,0,1.1,0.2,1.6,0.6c1,0.9,1.1,2.4,0.2,3.4L86.7,46.4c-0.5,0.5-1.1,0.8-1.8,0.8
+				c-0.5,0-1-0.2-1.5-0.5l-8.2-6.4c-1-0.8-1.2-2.3-0.4-3.4c0.5-0.6,1.2-0.9,1.9-0.9c0.5,0,1,0.2,1.5,0.5l6.4,5l20.6-22.7
+				C105.7,18.3,106.3,18.1,107,18.1 M107,16.1L107,16.1c-1.2,0-2.4,0.5-3.3,1.4L84.4,38.9l-5-3.9c-0.8-0.6-1.7-0.9-2.7-0.9
+				c-1.4,0-2.6,0.6-3.5,1.7c-1.5,1.9-1.1,4.7,0.8,6.2l8.2,6.4c0.8,0.6,1.7,0.9,2.7,0.9c1.2,0,2.4-0.5,3.3-1.4l22.1-24.4
+				c1.6-1.8,1.5-4.6-0.3-6.2C109.1,16.5,108.1,16.1,107,16.1L107,16.1z"/>
+		</g>
+	</g>
+</g>
+<rect x="42.4" y="65.2" fill="#0071BC" width="80.9" height="13.5"/>
+</svg>
+              </div>
+            </a>
+          </div>
+          <div id="skip-target" class="tablet:grid-col-9 right-shift">
+            <div class="align-center">
+              <h1 class="main-heading" data-test="main-header">National Voter Registration Form</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class="tablet:grid-col-3"></div>
+          <div class="tablet:grid-col-9 right-shift">
+            <section class="voter-info page-type--basic">
+
+              <div class="about-page">
+                <div id="root"></div>
+                
+              </div>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+
+
+
+
+
+    <div class="bg-lightblue footer-contact" data-test="footer-contact">
+
+      <div class="grid-container eac-vote-partnership">
+        <div class="grid-row">
+          <div class="tablet:grid-col-auto">
+            <div class="vote-txt">Vote.gov</div>
+            <img class="vote-logo" loading="lazy" width="130" height="160" src="/assets/ballot_box-blue-c6f5e54b.svg"
+                 alt="Web design standards">
+          </div>
+          <div class="tablet:grid-col-auto partnership-txt">in partnership with</div>
+          <div class="tablet:grid-col-auto eac-container">
+            <a href="https://www.eac.gov/">
+              <img class="eac-logo" width="146" height="48" src="/assets/eac-logo-be217f54.webp" alt="In partnership with U.S. Election Assistance Commission">
+            </a>
+
+          </div>
+          <div class="tablet:grid-col"></div>
+          <div class="tablet:grid-col-auto twitter-container">
+            <a href="https://twitter.com/votegov" class="twitter-link">
+              <span>Follow Vote.gov on Twitter</span>
+              <svg class="usa-icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.912 7.925v.527A11.562 11.562 0 0 1 8.265 20.098 11.443 11.443 0 0 1 2 18.265c.328.017.657.017.985 0a8.132 8.132 0 0 0 5.093-1.698 4.092 4.092 0 0 1-3.786-2.852c.255.062.518.091.781.085.36-.002.72-.047 1.07-.136a4.109 4.109 0 0 1-3.21-4.024c.566.32 1.202.494 1.851.51a4.126 4.126 0 0 1-1.34-5.518 11.613 11.613 0 0 0 8.488 4.295 4.397 4.397 0 0 1-.119-.934 4.092 4.092 0 0 1 4.092-4.092 4.04 4.04 0 0 1 3.005 1.29 7.929 7.929 0 0 0 2.53-1c-.3.953-.94 1.763-1.8 2.274A7.725 7.725 0 0 0 22 5.803a8.489 8.489 0 0 1-2.088 2.122Z" fill-rule="evenodd"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="footer-identifier" data-test="footer">
+      <div class="grid-container">
+        <section class="identifier-gsa grid-row grid-gap-2" aria-label="Agency identifier">
+          <div><img src="/assets/gsa-logo-b6a1dead.svg" alt="GSA logo" width="40" height="40"></div>
+          <div aria-label="Agency description" class="grid-col-auto">
+            Vote.gov <br>
+            <strong>An official website of the
+              <a href="https://www.gsa.gov/">General Services Administration</a></strong>
+          </div>
+        </section>
+        <nav class="grid-row grid-gap identifier" aria-label="Important links">
+          <div class="tablet:grid-col-3">
+            <ul class="usa-list usa-list--unstyled identifier-links">
+              <li><a href="/about-us">About Vote.gov</a></li>
+              <li><a href="https://www.gsa.gov/website-information/accessibility-aids">Accessibility</a></li>
+            </ul>
+          </div>
+          <div class="tablet:grid-col-3">
+            <ul class="usa-list usa-list--unstyled identifier-links">
+              <li><a href="https://www.gsa.gov/reference/freedom-of-information-act-foia">FOIA Requests</a></li>
+              <li><a
+                      href="https://www.gsa.gov/reference/civil-rights-programs/notification-and-federal-employee-antidiscrimination-and-retaliation-act-of-2002">No Fear Act data</a></li>
+            </ul>
+          </div>
+          <div class="tablet:grid-col-3">
+            <ul class="usa-list usa-list--unstyled identifier-links">
+              <li><a href="https://www.gsaig.gov/">Office of the Inspector General</a></li>
+              <li><a href="https://www.gsa.gov/reference/reports/budget-performance">Performance Reports</a></li>
+            </ul>
+          </div>
+          <div class="tablet:grid-col-3">
+            <ul class="usa-list usa-list--unstyled identifier-links">
+              <li><a href="https://www.usa.gov/policies">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </nav>
+        <section aria-label="Government information and services" class="identifier-gov-info">Looking for U.S. government information and services?
+          <a href="https://www.usa.gov/">Visit USA.gov</a>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  </footer>
+</div>
+
+<script src="theme/assets/scripts/login.js"></script>
+
+</body>
+
 </html>
+
