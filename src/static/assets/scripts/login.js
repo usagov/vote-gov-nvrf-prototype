@@ -23,9 +23,19 @@ const validate = () => {
   let testUser = btoa(user.value) === loginCred.user;
 
   if (testPass && testUser) {
-    dialog.close();
-    container.removeAttribute("hidden");
+    success();
   } else {
     error.removeAttribute("hidden");
   }
+}
+
+const success = () => {
+  dialog.close();
+  container.removeAttribute("hidden");
+}
+
+// Allow developers to disable login by setting data attribute on dialog element.
+let status = dialog.getAttribute('data-enabled');
+if (status == "false") {
+  success();
 }

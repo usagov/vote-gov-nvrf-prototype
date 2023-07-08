@@ -58,7 +58,7 @@
 
 <body class="page-basic">
 
-<dialog id="loginDialogs" style="width: 480px; border: 0; border-radius: 0.5rem; padding: 1.5rem;">
+<dialog id="loginDialog" data-enabled="true" style="width: 480px; border: 0; border-radius: 0.5rem; padding: 1.5rem;">
     <form class="usa-form">
         <h2>Sign in</h2>
         <p>This prototype is restricted to authenticated users.</p>
@@ -80,7 +80,7 @@
         </div>
     </form>
 </dialog>
-<div id="protoContainer">
+<div id="protoContainer" hidden>
 <a class="usa-skipnav" href="#skip-target" onclick="document.getElementById('skip-target').focus();">Skip to main content</a>
 <header class="usa-header" role="banner">
 
